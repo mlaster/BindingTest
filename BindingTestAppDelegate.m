@@ -14,6 +14,8 @@
 @implementation BindingTestAppDelegate
 
 @synthesize window;
+@synthesize arrayController;
+@synthesize selectedDictionary;
 
 - (NSDictionary *)settings {
     static NSDictionary *_settings = nil;
@@ -31,7 +33,14 @@
     [NSValueTransformer setValueTransformer:transformer
                                     forName:@"CustomValueTransformer"];
 
-	 NSLog(@"settings: %@", [self settings]);
+    NSLog(@"settings: %@", [self settings]);
 }
 
+- (void) setSelectedDictionary:(NSDictionary *) inDictionary {
+    NSLog(@"TRACE: setSelectedDictionary: %@ (%@)", inDictionary, [inDictionary class]);
+    if (selectedDictionary != inDictionary) {
+        [selectedDictionary release];
+        selectedDictionary = [inDictionary retain];
+    }
+}
 @end
