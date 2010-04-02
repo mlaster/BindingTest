@@ -19,7 +19,14 @@
     NSString *retValue = value;
     
     NSLog(@"TRACE: transformedValue: %@ (%@)", value, [value class]);
+
+// Commented out because the caller is expecting this to be an NSArray
+// and is calling -count on it...
     
+//    retValue = [NSString stringWithFormat:@"%lu: %@",
+//                [value valueForKey:@"status"],
+//                [value valueForKey:@"message"]];
+
     return retValue;
 }
 
