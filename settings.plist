@@ -9,14 +9,20 @@
 			<string>Success</string>
 			<key>status</key>
 			<integer>200</integer>
+			<key>other_interesting_metadara</key>
+			<string>foo</string>
 		</dict>
 		<dict>
 			<key>message</key>
 			<string>Success Type 2</string>
+			<key>other_interesting_metadata</key>
+			<string>bar</string>
 			<key>status</key>
-			<integer>0</integer>
+			<integer>201</integer>
 		</dict>
 		<dict>
+			<key>other_interesting_metadata</key>
+			<string>baz</string>
 			<key>message</key>
 			<string>Success Type 3</string>
 			<key>status</key>

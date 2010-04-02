@@ -12,21 +12,38 @@
 @implementation CustomValueTransformer
 
 + (Class)transformedValueClass {
-    return [NSString class];
+    return [NSArray class];
+//    return [NSString class];
 }
 
+//- (id)transformedValue:(id)value {
+//    NSString *retValue = value;
+//    
+//    NSLog(@"TRACE: transformedValue: %@ (%@)", value, [value class]);
+//
+//// Commented out because the caller is expecting this to be an NSArray
+//// and is calling -count on it...
+//    
+////    retValue = [NSString stringWithFormat:@"%lu: %@",
+////                [value valueForKey:@"status"],
+////                [value valueForKey:@"message"]];
+//
+//    return retValue;
+//}
+
 - (id)transformedValue:(id)value {
-    NSString *retValue = value;
+    NSArray *retValue = value;
+    NSMutableArray *workArray = [NSMutableArray array];
     
     NSLog(@"TRACE: transformedValue: %@ (%@)", value, [value class]);
+    for (NSDictionary *dict in value) {
+        [workArray addObject:[NSString stringWithFormat:@"%@: %@",
+                              [dict valueForKey:@"status"],
+                              [dict valueForKey:@"message"]]];
+    }
 
-// Commented out because the caller is expecting this to be an NSArray
-// and is calling -count on it...
+    retValue = [[workArray copy] autorelease];
     
-//    retValue = [NSString stringWithFormat:@"%lu: %@",
-//                [value valueForKey:@"status"],
-//                [value valueForKey:@"message"]];
-
     return retValue;
 }
 
