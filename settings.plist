@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>customResponses</key>
+	<array>
+		<dict>
+			<key>message</key>
+			<string>Success</string>
+			<key>status</key>
+			<integer>200</integer>
+		</dict>
+		<dict>
+			<key>message</key>
+			<string>Success Type 2</string>
+			<key>status</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>message</key>
+			<string>Success Type 3</string>
+			<key>status</key>
+			<integer>202</integer>
+		</dict>
+	</array>
+</dict>
+</plist>
