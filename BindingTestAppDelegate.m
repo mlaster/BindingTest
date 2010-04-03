@@ -37,7 +37,7 @@
 }
 
 - (void) setSelectedDictionary:(NSDictionary *) inDictionary {
-    NSLog(@"TRACE: setSelectedDictionary: %@ (%@)", inDictionary, [inDictionary class]);
+    NSLog(@"TRACE: setSelectedDictionary: %@", [inDictionary class]);
     if (selectedDictionary != inDictionary) {
         [selectedDictionary release];
         selectedDictionary = [inDictionary retain];

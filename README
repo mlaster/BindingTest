@@ -1,0 +1,7 @@
+THe goal is to have the popup list show transformed values:
+
+200: Success
+201: Success Type 2
+202: Success Type 3
+
+But have the actual value selected be the underlying NSDictionary.
